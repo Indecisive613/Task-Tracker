@@ -8,29 +8,34 @@ function App() {
   const [tasks, setTasks] = useState(
     [
         {
-            id: 1,
-            text: 'Shopping',
-            day: 'Feb 4',
-            reminder: false,
+          id: 1,
+          text: 'Reorganize Notes',
+          day: 'November 31',
+          time: '',
+          reminder: false,
         },
         {
-            id: 2,
-            text: 'Cleaning',
-            day: 'Feb 5',
-            reminder: true,
+          id: 2,
+          text: 'Christmas Shopping',
+          day: 'December 4',
+          time: '1:00pm',
+          reminder: true,
         },
         {
-            id: 3,
-            text: 'Air duct cleaning',
-            day: 'Jan 4',
-            reminder: true,
+          id: 4,
+          text: 'Meet with friends',
+          day: 'December 27',
+          time: '2:30pm',
+          reminder: false,
         },
         {
-            id: 4,
-            text: 'Meet with friends',
-            day: 'Apr 4',
-            reminder: false,
-        }
+          id: 3,
+          text: 'Air duct cleaning',
+          day: 'Jan 4',
+          time: '8:00am',
+          reminder: true,
+        },
+        
     ]
   )
 

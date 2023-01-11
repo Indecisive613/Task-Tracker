@@ -9,7 +9,8 @@ const Task = ( { task, onDelete, onToggle }) => {
               onClick={() => onDelete(task.id)}
             />
         </h3>
-        <p>{task.day}</p>
+        <h5>{task.day}</h5>
+        <p>{task.time}</p>
     </div>
   )
 }

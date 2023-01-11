@@ -92,6 +92,11 @@ body {
 }
 
 .form-control-check {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-control-checkOG {
   display: flex;
   align-items: center;
   justify-content: space-between;

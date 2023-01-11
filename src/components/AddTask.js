@@ -4,7 +4,7 @@ const AddTask = ({ onAdd }) => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')
     const [time, setTime] = useState('')
-    const [reminder, setReminder] = useState(false)
+    const [important, setImportant] = useState(false)
 
     const onSubmit = (e) => {
         e.preventDefault() //so it doesn't submit to a page?
@@ -13,13 +13,13 @@ const AddTask = ({ onAdd }) => {
             return
         }
 
-        onAdd({ text, day, time, reminder})
+        onAdd({ text, day, time, important})
 
         //resets the form upon successful submission
         setText('')
         setDay('')
         setTime('')
-        setReminder(false)
+        setImportant(false)
     }
 
   return (
@@ -37,8 +37,8 @@ const AddTask = ({ onAdd }) => {
             <input type='text' placeholder='Add Time' value={time} onChange={(e) => setTime(e.target.value)}></input>
         </div>
         <div className='form-control form-control-check'>
-            <label>Set Reminder</label>
-            <input type='checkbox' checked={reminder} value={reminder} onChange={(e) => setReminder(e.currentTarget.checked)}></input>
+            <label>Set as Important</label>
+            <input type='checkbox' checked={important} value={important} onChange={(e) => setImportant(e.currentTarget.checked)}></input>
         </div>
         <input type='submit' value='Save Task' className='btn btn-block'></input>
     </form>

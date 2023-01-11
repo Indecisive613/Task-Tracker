@@ -12,28 +12,28 @@ function App() {
           text: 'Reorganize Notes',
           day: 'November 31',
           time: '',
-          reminder: false,
+          important: false,
         },
         {
           id: 2,
           text: 'Christmas Shopping',
           day: 'December 4',
           time: '1:00pm',
-          reminder: true,
+          important: true,
         },
         {
           id: 4,
           text: 'Meet with friends',
           day: 'December 27',
           time: '2:30pm',
-          reminder: false,
+          important: false,
         },
         {
           id: 3,
           text: 'Air duct cleaning',
           day: 'Jan 4',
           time: '8:00am',
-          reminder: true,
+          important: true,
         },
         
     ]
@@ -54,8 +54,8 @@ function App() {
   }
 
   //toggle reminder
-  const toggleReminder = (id) => {
-    setTasks(tasks.map((task) => task.id === id? {...task, reminder: !task.reminder}: task))
+  const toggleImportance = (id) => {
+    setTasks(tasks.map((task) => task.id === id? {...task, important: !task.important}: task))
     console.log(id)
   }
 
@@ -63,7 +63,7 @@ function App() {
     <div className='container'>
       <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
       {showAddTask? <AddTask onAdd={addTask}/> : ''}
-      {tasks.length > 0? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : 'All free!'}
+      {tasks.length > 0? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleImportance}/> : 'Congratulations, you have no tasks!'}
     </div>
   );
 }
